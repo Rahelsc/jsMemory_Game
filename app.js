@@ -37,10 +37,31 @@ document.addEventListener('DOMContentLoaded', () => {
             name: 'swing',
             img: 'images/swing.jpg'
         },
+        {
+            name: 'horse',
+            img: 'images/horse.jpg'
+        },
+        {
+            name: 'ice cream',
+            img: 'images/ice-cream.jpg'
+        },
+        {
+            name: 'white flower',
+            img: 'images/white-flower.jpg'
+        },
     ]
 
     const grid = document.querySelector('.grid')
 
     //create your board
-    
+    function createBoard() {
+        for (let i = 0; i < cardArray.length; i++) {
+            var card = document.createElement('img')
+            card.setAttribute('src', 'images/blank.jpg')
+            card.setAttribute('data-id', i)
+            // card.addEventListener('click', flipcard)
+            grid.appendChild(card)
+        }        
+    }
+
 })
